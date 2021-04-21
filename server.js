@@ -19,7 +19,7 @@ app.get("/api/notes", (req, res) => {
 });
 
 app.post("/api/notes", (req, res) => {
-    const note = req.body;
+    let note = req.body;
 
     noteList.push(note);
     note.id = noteList.indexOf(note);
